@@ -1,0 +1,268 @@
+
+h3 > span {
+    /* style */
+    color: var(--color-action);
+    font-family: var(--font-all);
+}
+
+.btn {
+    /* tamanho */
+    padding: 5px 10px;
+
+    /* style */
+    border: solid 2px var(--color-highlight);
+    border-radius: 10px;
+}
+
+
+
+/* Nav */
+    
+nav {
+    /* tamaho */
+    padding-right: min(30px, 5vw);
+
+    /* disposição */
+    display: flex;
+    align-items: flex-end;
+    gap: 1vw;
+}
+
+#home {
+    /* style */
+    color: var(--color-action);
+}
+
+.link-nav:hover {
+    /* style */
+    color: var(--color-action);
+}
+
+/* Header */
+
+header {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
+/* Introdução */
+
+#introducao {
+    /* tamanho */
+    padding: 10px 10px 1px 10px;
+
+    /* disposição */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    /* style */
+    border-bottom: 3px solid var(--color-highlight);
+}
+
+/* Container */
+#container {
+    /* tamanho */
+    margin: 20px 0px 0px 15px;
+
+    /* disposição */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 0px;
+
+    grid-template-areas: 
+    "main article"
+    "extend-container extend-container";
+}
+
+.extend-container {
+    /* disposição */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100% auto;
+    gap: 0px 20px;
+
+    grid-template-areas: 
+    "section aside"
+    "section footer";
+}
+
+/* container */
+main{grid-area: main;}
+article{grid-area: article;}
+.extend-container{grid-area: extend-container;}
+
+/* extend-container */
+section{grid-area: section;}
+aside{grid-area: aside;}
+footer{grid-area: footer;}
+
+/* Main */
+
+main {
+    /* dissposição */
+    display: grid;
+    grid-template-columns: auto 2fr;
+    align-items: center;
+    gap: 20px;
+
+    grid-template-areas: 
+    "img conteudo-principal";
+
+}
+
+#main-content{
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    /* area */
+    grid-area: conteudo-principal;
+}
+
+main > img {
+    /* tamanho */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20%;
+    margin-bottom: 150px;
+
+    /* area */
+    grid-area: img;
+}
+
+#main-btns {
+    /* disposição */
+    display: flex;
+    justify-content: flex-start;
+    gap: min(20px, 5vw);
+}
+
+/* Section */
+
+section {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section h3 {
+    /* tamanho */
+    margin-bottom: 20px;
+}
+
+#list {
+    /* style */
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+}
+
+#list li {
+    /* style */
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+/* Article */
+
+article {
+    /* tamanho */
+    padding-top: 5vh;
+
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+}
+
+article > h3{
+    /* tamanho */
+    margin-bottom: 2vh;
+}
+
+article h4 {
+    /* tamanho */
+    margin-bottom: 1vh;
+}
+
+.layout-icons {
+    /* disposição */
+    display: grid;
+    gap: 2vh 0px;
+
+    grid-template-areas: 
+    "lower lower"
+    "web web"
+    "data tool";
+}
+
+/* layout-icons */
+#lower-level {grid-area: lower;}
+#web {grid-area: web;}  
+#data {grid-area: data;}
+#tools {grid-area: tool;}
+
+.layer-icons > div {
+    /* tamanho */
+    min-height: 0;
+}
+
+.layer-icons {
+    /* disposição */
+    display: flex;
+    gap: 15px;
+}
+
+.icon-article {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Aside */
+
+aside {
+    /* tamanho */
+    margin-bottom: 20px;
+}
+
+/* Footer */
+
+footer {
+    /* tamanho */
+    padding: 15px 10px;
+    
+    /* disposição */
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+    /* style */
+    color: var(--font-color);
+    border-top: 3px solid var(--color-highlight);
+}
+
+#footer-content {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#iconFooter {
+    /* disposição */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
