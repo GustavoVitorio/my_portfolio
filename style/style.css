@@ -16,27 +16,51 @@ a {
 /* Variaveis*/
 
 :root {
-    --primary-color: #0F172A;
-    --font-color: #F8FAFC;
-    --color-highlight: #1E293B;
-    --color-action: #42c6ff;
+    /* cor do corpo */
+    --primary-color: #050505;
 
+    /* cor da fonte */
+    --font-color: #ECECEC;
+    --font-secondary: #757575;
+
+    /* cores de ação */
+    --color-action: #00D1FF;
+    --action-hover: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4);
+
+    /* cores de destaque */
+    --color-highlight-I: #242424;
+    --color-highlight-II: #000000;
+
+    /* cores lista */
+    --icon-list: #303030;
+
+    /* cores dos botões */
+    --background-btn: #252525;
+    --border-btn: #3b3b3b;
+        
+    /* fontes */
     --font-title: 'Roboto', sans-serif;
     --font-all: 'Montserrat Alternates', sans-serif;
 }
 
 /* padrão */
 
-.icon{
+/* inverter cores de icones */
+
+.icon {
     filter: invert(100%);
 }
 
 body{
-    background-color: #0D0D0D;
+    /* Style */
+    background-color: var(--primary-color);
     color: var(--font-color);
     font-family: var(--font-all);
 
+    /* Tamanho */
     min-height: 100vh;
+
+    /* Disposição */
     display: flex;
     flex-direction: column;
 }

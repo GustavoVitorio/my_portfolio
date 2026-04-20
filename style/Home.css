@@ -1,20 +1,32 @@
 
-h3 > span {
-    /* style */
-    color: var(--color-action);
-    font-family: var(--font-all);
-}
+/* Genérico */
 
 .btn {
     /* tamanho */
     padding: 5px 10px;
 
     /* style */
-    border: solid 2px var(--color-highlight);
-    border-radius: 10px;
+    background-color: var(--background-btn);
+    border: solid 2px var(--border-btn);
+    border-radius: 30px;
+    color: var(--font-secondary);
+    transition: 0.3s;
 }
 
+.btn:hover {
+    background-color: var(--border-btn);
+    border-color: var(--background-btn);
+    color: var(--color-action);
+    filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan);
+    font-weight: 600;
+}
 
+.text-secondary {
+    /* style */
+    color: var(--font-secondary);
+}
 
 /* Nav */
     
@@ -33,9 +45,18 @@ nav {
     color: var(--color-action);
 }
 
+.link-nav {
+    transition: 0.3s;
+}
+
 .link-nav:hover {
     /* style */
     color: var(--color-action);
+    transform: scale(1.05);
+    filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan);
+    font-weight: 600;
 }
 
 /* Header */
@@ -80,7 +101,10 @@ header {
     "extend extend";
 }
 
-.extend-container {
+#extend-container {
+    /* tamanho */
+    margin-right: 10px;
+    
     /* disposição */
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -95,7 +119,7 @@ header {
 /* container */
 main{grid-area: main;}
 article{grid-area: article;}
-.extend-container{grid-area: extend;}
+#extend-container{grid-area: extend;}
 
 /* extend-container */
 section{grid-area: section;}
@@ -179,26 +203,26 @@ section h3 {
     /* style */
     content: "";
     position: absolute;
-    background-color: var(--color-highlight);
+    background-color: var(--icon-list);
     border-radius: 50%;
 
     /* tamanho */
     left: 0;
-    top: 12px;
-    width: 10px;
-    height: 10px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
 }
 
 #list li::after {
     /* style */
     content: "";
     position: absolute;
-    background-color: var(--color-highlight);
+    background-color: var(--icon-list);
 
     /* tamanho */
     left: 4px;
-    top: 22px;
-    width: 2px;
+    top: 14px;
+    width: 1px;
     height: calc(100% + 40px);
 }
 
@@ -273,7 +297,86 @@ article h4 {
 
 aside {
     /* tamanho */
-    margin-bottom: 20px;
+    height: 100%;
+
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+aside > h3 > span {
+    /* style */
+    color: var(--color-action);
+}
+
+#aside-content {
+    /* tamanho */
+    margin: auto 0;
+
+    /* disposição */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.aside-elements {
+    /* style */
+    background-color: var(--color-highlight-I);
+    border-radius: 10px;
+
+    /* tamanho */
+    padding: 10px;
+    width: 240px;
+
+    /* disposição */
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+.aside-elements > img {
+    /* tamanho */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.aside-linguage > p {
+    /* style */
+    background-color: var(--color-highlight-II);
+    border-radius: 30px;
+
+    /* tamanho */
+    padding: 4px 8px;
+
+    /* disposição */
+    display: inline-block;
+}
+
+#aside-linguage {
+    /* style */
+    background-color: var(--color-action);
+    border-radius: 5px;
+
+    /* tamanho */
+    padding: 5px 10px;
+    width: fit-content;
+    
+    /* disposição */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.aside-btns {
+    /* disposição */
+    display: flex;
+    gap: 5px;
+}
+
+.aside-btns > a {
+    white-space: nowrap;
 }
 
 /* Footer */
@@ -289,7 +392,7 @@ footer {
 
     /* style */
     color: var(--font-color);
-    border-top: 3px solid var(--color-highlight);
+    border-top: 3px solid var(--color-highlight-I);
 }
 
 #footer-content {
