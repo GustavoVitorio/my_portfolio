@@ -13,82 +13,15 @@
     transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: var(--border-btn);
-    border-color: var(--background-btn);
-    color: var(--color-action);
-    filter: 
-    drop-shadow(0 0 5px cyan)
-    drop-shadow(0 0 10px cyan);
-    font-weight: 600;
-}
-
 .text-secondary {
     /* style */
     color: var(--font-secondary);
 }
 
-/* Nav */
-    
-nav {
-    /* tamaho */
-    padding-right: min(30px, 5vw);
-
-    /* disposição */
-    display: flex;
-    align-items: flex-end;
-    gap: 1vw;
-}
-
-#home {
-    /* style */
-    color: var(--color-action);
-}
-
-.link-nav {
-    transition: 0.3s;
-}
-
-.link-nav:hover {
-    /* style */
-    color: var(--color-action);
-    transform: scale(1.05);
-    filter: 
-    drop-shadow(0 0 5px cyan)
-    drop-shadow(0 0 10px cyan);
-    font-weight: 600;
-}
-
-/* Header */
-
-header {
-    /* disposição */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1px;
-}
-
-/* Introdução */
-
-#introducao {
-    /* tamanho */
-    padding: 10px 10px 1px 10px;
-
-    /* disposição */
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
-
-    /* style */
-    /* border-bottom: 3px solid var(--color-highlight); */
-}
-
 /* Container */
 #container {
     /* tamanho */
-    margin: 20px 0px 0px 15px;
+    margin: 20px 0 0 15px;
 
     /* disposição */
     display: grid;
@@ -126,6 +59,49 @@ section{grid-area: section;}
 aside{grid-area: aside;}
 footer{grid-area: footer;}
 
+/* Introdução */
+
+#introducao {
+    /* tamanho */
+    padding: 10px 10px 1px 10px;
+
+    /* disposição */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav */
+    
+nav {
+    /* tamaho */
+    padding-right: min(30px, 5vw);
+
+    /* disposição */
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#home {
+    /* style */
+    color: var(--color-action);
+}
+
+.link-nav {
+    transition: 0.3s;
+}
+
+/* Header */
+
+header {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
 /* Main */
 
 main {
@@ -151,6 +127,12 @@ main {
 }
 
 main > img {
+    /* Style */
+    box-shadow: 
+    0 0 5px cyan,
+    0 0 10px cyan,
+    0 0 15px cyan;
+    
     /* tamanho */
     width: 100%;
     max-width: 300px;
@@ -167,73 +149,6 @@ main > img {
     display: flex;
     justify-content: flex-start;
     gap: min(20px, 5vw);
-}
-
-/* Section */
-
-section {
-    /* disposição */
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-section h3 {
-    /* tamanho */
-    margin-bottom: 20px;
-}
-
-#list {
-    /* style */
-    list-style: none;
-
-    /* tamanho */
-    padding-left: 20px;
-    position: relative;
-}
-
-#list li {
-    /* tamanho */
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 40px;
-}
-
-#list li::before {
-    /* style */
-    content: "";
-    position: absolute;
-    background-color: var(--icon-list);
-    border-radius: 50%;
-
-    /* tamanho */
-    left: 0;
-    top: 5px;
-    width: 9px;
-    height: 9px;
-}
-
-#list li::after {
-    /* style */
-    content: "";
-    position: absolute;
-    background-color: var(--icon-list);
-
-    /* tamanho */
-    left: 4px;
-    top: 14px;
-    width: 1px;
-    height: calc(100% + 40px);
-}
-
-#list li:first-child::before {
-    /* style */
-    background-color: var(--color-action);
-}
-
-#list li:last-child::after {
-    /* style */
-    display: none; 
 }
 
 /* Article */
@@ -293,6 +208,80 @@ article h4 {
     gap: 10px;
 }
 
+/* Section */
+
+section {
+    /* disposição */
+    gap: 40px 0px;
+}
+
+section h3 {
+    /* tamanho */
+    margin-bottom: 20px;
+}
+
+#section-about {
+    text-align: justify;
+}
+
+#list {
+    /* style */
+    list-style: none;
+
+    /* tamanho */
+    padding-left: 20px;
+    position: relative;
+}
+
+#list li {
+    /* tamanho */
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+#list li::before {
+    /* style */
+    content: "";
+    position: absolute;
+    background-color: var(--icon-list);
+    border-radius: 50%;
+
+    /* tamanho */
+    left: 0;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+}
+
+#list li::after {
+    /* style */
+    content: "";
+    position: absolute;
+    background-color: var(--icon-list);
+
+    /* tamanho */
+    left: 4px;
+    top: 14px;
+    width: 1px;
+    height: calc(100% + 40px);
+}
+
+#list li:first-child::before {
+    /* style */
+    background-color: var(--color-action);
+
+    filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan);
+    font-weight: 600;
+}
+
+#list li:last-child::after {
+    /* style */
+    display: none; 
+}
+
 /* Aside */
 
 aside {
@@ -308,6 +297,10 @@ aside {
 aside > h3 > span {
     /* style */
     color: var(--color-action);
+    filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan);
+    font-weight: 600;
 }
 
 #aside-content {
@@ -327,7 +320,7 @@ aside > h3 > span {
 
     /* tamanho */
     padding: 10px;
-    width: 240px;
+    width: 15rem;
 
     /* disposição */
     display: flex;
@@ -407,4 +400,156 @@ footer {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+@media (hover: hover) and (pointer: fine) {
+    /* Efeito botão desktop */
+    .link-nav:hover, .btn:hover{
+    color: var(--color-action);
+    transform: scale(1.05);
+    filter: 
+    drop-shadow(0 0 5px cyan)
+    drop-shadow(0 0 10px cyan);
+    font-weight: 600;
+    }
+
+    .btn:hover {
+        background-color: var(--border-btn);
+        border-color: var(--background-btn);
+    }
+}
+
+@media (max-width: 1060px) {
+    /* Efeito botão Telas Touch-Screen */
+    .btn:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+    }
+    
+    /* container */
+    #container {
+        margin:  20px 0 0 0;
+
+        /* disposição */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   #extend-container {
+    margin-right: 0;
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   /* main */
+   main {
+    display: flex;
+    flex-direction: column;
+   }
+
+   main > img {
+    margin: 0;
+   }
+
+   #main-content{
+    align-items: center;
+   }
+
+   #main-text {
+    text-align: center;
+   }
+
+   /* Section */
+   section {
+    margin: 0px 7rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+   }
+
+   #section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+   /* Aside */
+
+   #aside-content {
+    /* disposição */
+    justify-content: center;
+   }
+
+   /* Footer */
+   
+   footer {
+    /* tamanho */
+    margin-top: 10px;
+    width: 100%;
+
+    /* disposição */
+    justify-content: center;
+   }
+}
+
+@media (max-width: 1060px) and (min-width: 580px) {
+    /* article */
+   .layout-icons {
+    display: flex;
+    gap: 40px;
+   }
+}
+
+@media (max-width: 770px) {
+    /* Section */
+    section {
+        margin: 0 1rem;
+    }
+    
+    /* Aside */
+    #aside-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 680px) {
+    /* Header */
+    header{
+        margin-bottom: 20px;
+    }
+    
+    /* Nav */
+    nav {
+        padding: 0;
+    }
+
+    /* Introdução */
+    #introducao {
+        flex-direction: column;
+    }
+
+    /* Header */
+    header {
+        align-items: center;
+    }
+}
+
+@media (max-width: 580px){
+    /* section */
+    section {
+        /* disposição */
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {    
+    /* Nav */
+    #home {
+        display: none;
+    }
+
 }
