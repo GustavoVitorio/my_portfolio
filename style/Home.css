@@ -35,14 +35,12 @@
 }
 
 #extend-container {
-    /* tamanho */
-    margin-right: 10px;
     
     /* disposição */
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr auto;
-    gap: 0px 20px;
+    gap: 20px;
 
     grid-template-areas: 
     "section aside"
@@ -139,6 +137,9 @@ main > img {
     height: auto;
     border-radius: 20%;
     margin-bottom: 150px;
+
+    /* disposição */
+    display: block;
 
     /* area */
     grid-area: img;
@@ -306,10 +307,11 @@ aside > h3 > span {
 #aside-content {
     /* tamanho */
     margin: auto 0;
+    
 
     /* disposição */
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -320,7 +322,7 @@ aside > h3 > span {
 
     /* tamanho */
     padding: 10px;
-    width: 15rem;
+    width: 15.5rem;
 
     /* disposição */
     display: flex;
@@ -366,6 +368,7 @@ aside > h3 > span {
     /* disposição */
     display: flex;
     gap: 5px;
+    align-items: center;
 }
 
 .aside-btns > a {
@@ -401,6 +404,13 @@ footer {
     justify-content: center;
     gap: 10px;
 }
+
+@media (min-width: 1300px) {
+    body {
+        margin: 0 7.5vw;
+    }
+}
+
 @media (hover: hover) and (pointer: fine) {
     /* Efeito botão desktop */
     .link-nav:hover, .btn:hover{
@@ -512,6 +522,7 @@ footer {
     /* Aside */
     #aside-content {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -551,5 +562,10 @@ footer {
     #home {
         display: none;
     }
+}
 
+@media (max-width: 350px) {    
+    main > img {
+        width: 80%;
+    }
 }
