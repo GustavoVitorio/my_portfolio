@@ -61,7 +61,7 @@ footer{grid-area: footer;}
 
 #introducao {
     /* tamanho */
-    padding: 10px 10px 1px 10px;
+    padding: 40px 20px 0 40px;
 
     /* disposição */
     display: flex;
@@ -72,13 +72,10 @@ footer{grid-area: footer;}
 /* Nav */
     
 nav {
-    /* tamaho */
-    padding-right: min(30px, 5vw);
-
     /* disposição */
     display: flex;
     align-items: flex-end;
-    gap: 10px;
+    gap: 15px;
 }
 
 #home {
@@ -87,17 +84,22 @@ nav {
 }
 
 .link-nav {
+    font-size: clamp(20px, 3vw, 25px);
     transition: 0.3s;
 }
 
 /* Header */
 
-header {
+header button {
     /* disposição */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1px;
+}
+
+header button img {
+    display: none;
+    transition: 0.3s;
 }
 
 /* Main */
@@ -136,7 +138,6 @@ main > img {
     max-width: 300px;
     height: auto;
     border-radius: 20%;
-    margin-bottom: 150px;
 
     /* disposição */
     display: block;
@@ -405,29 +406,6 @@ footer {
     gap: 10px;
 }
 
-@media (min-width: 1300px) {
-    body {
-        margin: 0 7.5vw;
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    /* Efeito botão desktop */
-    .link-nav:hover, .btn:hover{
-    color: var(--color-action);
-    transform: scale(1.05);
-    filter: 
-    drop-shadow(0 0 5px cyan)
-    drop-shadow(0 0 10px cyan);
-    font-weight: 600;
-    }
-
-    .btn:hover {
-        background-color: var(--border-btn);
-        border-color: var(--background-btn);
-    }
-}
-
 @media (max-width: 1060px) {
     /* Efeito botão Telas Touch-Screen */
     .btn:active {
@@ -469,6 +447,11 @@ footer {
 
    #main-text {
     text-align: center;
+   }
+
+   #main-text p {
+    width: 420px;
+    margin:auto
    }
 
    /* Section */
@@ -513,6 +496,29 @@ footer {
    }
 }
 
+@media (max-width: 940px) {
+    /* introdução */
+    #introducao {
+        padding-left: 20px;
+    }
+    
+    /* Header */
+    header button {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    
+    /* Nav */
+    nav {
+        padding: 0;
+    }
+
+    /* Introdução */
+    #introducao {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 770px) {
     /* Section */
     section {
@@ -526,29 +532,13 @@ footer {
     }
 }
 
-@media (max-width: 680px) {
-    /* Header */
-    header{
-        margin-bottom: 20px;
+@media (max-width: 580px){
+    /* container */
+    #container {
+        width: 420px;
+        margin:20px auto 0 auto;
     }
     
-    /* Nav */
-    nav {
-        padding: 0;
-    }
-
-    /* Introdução */
-    #introducao {
-        flex-direction: column;
-    }
-
-    /* Header */
-    header {
-        align-items: center;
-    }
-}
-
-@media (max-width: 580px){
     /* section */
     section {
         /* disposição */
@@ -557,10 +547,53 @@ footer {
     }
 }
 
-@media (max-width: 400px) {    
+@media (max-width: 510px) {    
     /* Nav */
     #home {
         display: none;
+    }
+}
+
+@media (max-width: 440px) {
+    
+    #introducao {
+        border-bottom: 3px solid var(--color-highlight-I);
+        padding-top: 10px;
+    }
+
+    header button {
+        margin: 0;
+    }
+
+    header button img.rotate {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        margin: 20px 0;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 10px;
+    }
+    
+    #nav_bar img {
+        display: block;
+    }
+
+    #container {
+        width: auto;
+    }
+    
+    #main-text p {
+        width: auto;
     }
 }
 
