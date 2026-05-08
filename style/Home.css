@@ -97,7 +97,7 @@ header button {
     align-items: flex-start;
 }
 
-header button img {
+header img {
     display: none;
     transition: 0.3s;
 }
@@ -584,7 +584,7 @@ footer {
         gap: 10px;
     }
     
-    #nav_bar img {
+    header img {
         display: block;
     }
 
