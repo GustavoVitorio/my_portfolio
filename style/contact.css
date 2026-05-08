@@ -1,3 +1,170 @@
+
+/* Body */
+
 body {
+    /* disposição */
     justify-content: space-between;
+}
+
+/* introducao */
+#contact {
+    /* style */
+    color: var(--color-action);
+}
+
+/* Container */
+
+#container {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+/* Main */
+
+main {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* tamanho */
+    margin: 20px 0;
+}
+
+main h1 {
+    /* tamanho */
+    margin-bottom: 20px;
+}
+
+main h1 span {
+    /* style */
+    color: var(--color-action);
+    font-size: inherit;
+    font-family: inherit;
+}
+
+main p {
+    /* disposição */
+    text-align: center;
+    
+    /* tamanho */
+    width: 50vw;
+
+    /* style */
+    font-size: clamp(1rem, 4vw, 1.5rem);;
+}
+
+/* Article */
+
+article {
+    /* disposição */
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    
+    /* tamanho */
+    margin: 20px;
+}
+
+.elements-article {
+    /* disposição */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    
+    /* tamanho */
+    min-width: 270px;
+    width: calc(270px + 5vw);
+    height: 200px;
+    
+    /* style */
+    border: 2px solid var(--color-highlight-I);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+@media (hover:hover) and (pointer: fine) {
+
+    /* Article */
+    
+    .elements-article:hover {
+        background-color: var(--color-highlight-I);
+        border-color: var(--color-highlight-III);
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* Body */
+    body {
+        /* disposição */
+        margin: auto;
+
+        /* tamanho */
+        width: 1400px;
+    }
+}
+
+@media (max-width: 940px) {
+    /* article */
+    article {
+        /* disposição */
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 650px) {
+    /* Nav */
+    #contact {
+        /* disposição */
+        display: none;
+    }
+    
+    /* Main */
+
+    main p {
+        /* tamanho */
+        width: auto;
+        margin: 0 10vw;
+    }
+}
+
+@media (max-width: 350px) {
+
+    /* Main */
+
+    main p {
+        /* tamanho */
+        margin: 0 5px;
+    }
+    
+    /* Article */
+
+    article {
+        /* disposição */
+        gap: 20px;
+
+        /* tamanho */
+        margin: 0;
+    }
+    
+    .elements-article {
+        /* tamanho */
+        min-width: 0;
+        width: 210px;
+        
+        /* style */
+        border-radius: 50%;
+    }
+    
+    .elements-article p {
+        /* disposição */
+        display: none;
+    }
 }
