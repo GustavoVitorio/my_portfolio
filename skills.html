@@ -26,55 +26,118 @@
     </div>
 
     <main>
-        <h1> Tech <span>Stack</span> & Hard Skills</h1>
+        <h1> Tech <span>Stack</span><br> & <br>Hard Skills</h1>
         <section>
-            <div class="cards-section">
-                <img src="" alt="">
-                <h3>Front-end</h3>
+
+            <!-- Front-end -->
+            
+            <button type="button" id="frontend" class="cards-section">
+
+                <!-- Titúlo Front-end -->
+                
+                <div class="title-element">
+                    <img src="./img/icons/Fornt-end.png" alt="">
+                    <h3>Front-end</h3>
+
+                    <div>
+                        <p>+</p>
+                    </div>
+                </div>
+
+                <!-- Elementos Front-end -->
+                
                 <div class="elements-section">
+                    
                     <div class="element">
-                        <img src="./img/icons/HTML.png" alt="icone do HTML5." class="icon">
+                        <img src="./img/icons/HTML.png" alt="icone do HTML5." class="icon img-skills">
                         <h4>HTML5</h4>
                     </div>
+                    <div class="barra" data-level="avancado"></div>
+                    
                     <div class="element">
-                        <img src="./img/icons/CSS.png" alt="icone do CSS3." class="icon">
+                        <img src="./img/icons/CSS.png" alt="icone do CSS3." class="icon img-skills">
                         <h4>CSS3</h4>
                     </div>
+                    <div class="barra" data-level="avancado"></div>
                 </div>
-            </div>
-            <div class="cards-section">
-                <img src="" alt="">
-                <h3>Back-end</h3>
+            </button>
+
+            <!-- Back-end -->
+            
+            <button type="button" id="backend" class="cards-section">
+
+                <!-- Titúlo Back-end -->
+                
+                <div class="title-element">
+                    <img src="./img/icons/Back-end.png" alt="">
+                    <h3>Back-end</h3>
+                    
+                    <div>
+                        <p>+</p>
+                    </div>
+                </div>
+
+                <!-- Elementos Back-end -->
+                
                 <div class="elements-section">
+
                     <div class="element">
-                        <img src="./img/icons/Python.png" alt="icone do Python." class="icon">
+                        <img src="./img/icons/Python.png" alt="icone do Python." class="icon img-skills">
                         <h4>Python</h4>
                     </div>
+                    <div class="barra" data-level="basico"></div>
+                    
                     <div class="element">
-                        <img src="./img/icons/C++.png" alt="icone do C." class="icon">
+                        <img src="./img/icons/C.png" alt="icone do C." class="icon img-skills">
                         <h4>C</h4>
                     </div>
+                    <div class="barra" data-level="basico"></div>
+
                     <div class="element">
-                        <img src="./img/icons/PostgreSQL.png" alt="icone do PostgreSQL." class="icon">
+                        <img src="./img/icons/PostgreSQL.png" alt="icone do PostgreSQL." class="icon img-skills">
                         <h4>PostgreSQL</h4>
                     </div>
+                    <div class="barra" data-level="intermediario"></div>
                 </div>
-            </div>
-            <div class="cards-section">
-                <img src="" alt="">
-                <h3>Ferramentas</h3>
-                <div class="elements-section">
-                    <div class="element">
-                        <img src="./img/icons/GIT.png" alt="icone do Git." class="icon">
-                        <h4>Git/GitHub</h4>
+            </button>
+
+            <!-- Ferramentas -->
+            
+            <button type="button" id="ferramenta" class="cards-section">
+
+                <!-- Titúlo Ferramentas -->
+                
+                <div class="title-element">
+                    <img src="./img/icons/Ferramenta.png" alt="">
+                    <h3>Ferramentas</h3>
+
+                    <div>
+                        <p>+</p>
                     </div>
                 </div>
-            </div>
+
+                <!-- Elementos Ferramentas -->
+                
+                <div class="elements-section">
+
+                    <div class="element">
+                        <img src="./img/icons/GIT.png" alt="icone do Git." class="icon img-skills">
+                        <h4>Git/GitHub</h4>
+                    </div>
+                    <div class="barra" data-level="intermediario"></div>
+                </div>
+            </button>
         </section>
     </main>
+
+    <!-- Fundo -->
+    
+    <div id="blur" class="disable"></div>
     
     <footer id="rodape">
         <p>GUSTAVO VITÓRIO - FULL-STACK DEVELOPER - 2026</p>
     </footer>
 </body>
+<script src="./js/skills.js"></script>
+<script src="./js/nav_bar.js"></script>
 </html>
