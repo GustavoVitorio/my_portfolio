@@ -5,6 +5,11 @@ body {
     justify-content: space-between;
 }
 
+/* Nav */
+#skills {
+    color: var(--color-action);
+}
+
 /* Main */
 
 main {
