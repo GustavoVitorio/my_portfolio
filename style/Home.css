@@ -578,7 +578,7 @@ footer {
         display: none;
     }
 
-    nav.active {
+    nav.expand {
         margin: 20px 0;
         
         display: flex;
