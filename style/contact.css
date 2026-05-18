@@ -87,18 +87,6 @@ article {
     transition: 0.3s;
 }
 
-@media (hover:hover) and (pointer: fine) {
-
-    /* Article */
-    
-    .elements-article:hover {
-        background-color: var(--color-highlight-I);
-        border-color: var(--color-highlight-III);
-        transform: scale(1.1);
-        transition: 0.3s;
-    }
-}
-
 @media (min-width: 1400px) {
     /* Body */
     body {

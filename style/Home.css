@@ -6,8 +6,8 @@
     padding: 5px 10px;
 
     /* style */
-    background-color: var(--background-btn);
-    border: solid 2px var(--border-btn);
+    /* background-color: var(--primary-color); */
+    border: solid 2px var(--color-highlight-I);
     border-radius: 30px;
     color: var(--font-secondary);
     transition: 0.3s;
@@ -377,7 +377,9 @@ aside > h3 > span {
 }
 
 .aside-btns > a {
+    /* style */
     white-space: nowrap;
+    border-color: var(--color-highlight-III);
 }
 
 /* Footer */
@@ -410,14 +412,18 @@ footer {
     gap: 10px;
 }
 
+@media (hover:hover) and (pointer: fine) {
+    .aside-btns > a:hover {
+        /* style */
+        background-color: var(--color-highlight-III);
+        border-color: var(--color-highlight-II);
+    }   
+}
+
 @media (max-width: 1060px) {
-    /* Efeito botão Telas Touch-Screen */
-    .btn:active {
-    transform: scale(0.95);
-    opacity: 0.8;
-    }
-    
+
     /* container */
+
     #container {
         margin:  20px 0 0 0;
 
@@ -436,6 +442,7 @@ footer {
    }
 
    /* main */
+
    main {
     display: flex;
     flex-direction: column;
@@ -459,6 +466,7 @@ footer {
    }
 
    /* Section */
+
    section {
     margin: 0px 7rem;
 
@@ -493,7 +501,9 @@ footer {
 }
 
 @media (max-width: 1060px) and (min-width: 580px) {
+
     /* article */
+
    .layout-icons {
     display: flex;
     gap: 40px;
@@ -501,35 +511,43 @@ footer {
 }
 
 @media (max-width: 940px) {
+
     /* introdução */
+
     #introducao {
         padding-left: 20px;
     }
     
     /* Header */
+
     header button {
         margin-bottom: 20px;
         align-items: center;
     }
     
     /* Nav */
+
     nav {
         padding: 0;
     }
 
     /* Introdução */
+
     #introducao {
         flex-direction: column;
     }
 }
 
 @media (max-width: 770px) {
+
     /* Section */
+
     section {
         margin: 0 1rem;
     }
     
     /* Aside */
+
     #aside-content {
         flex-direction: column;
         align-items: center;
@@ -537,13 +555,16 @@ footer {
 }
 
 @media (max-width: 580px){
+
     /* container */
+
     #container {
         width: 420px;
         margin:20px auto 0 auto;
     }
     
     /* section */
+
     section {
         /* disposição */
         display: flex;
@@ -552,7 +573,9 @@ footer {
 }
 
 @media (max-width: 510px) {    
+    
     /* Nav */
+
     #home {
         display: none;
     }

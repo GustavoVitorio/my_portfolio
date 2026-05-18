@@ -236,6 +236,16 @@ section {
     }
 }
 
+@media (max-width: 650px) {
+
+    /* Nav */
+    
+    #skills {
+        /* disposição */
+        display: none;
+    }
+}
+
 @media (max-width: 380px) {
     main > h1 {
         text-align: center;
