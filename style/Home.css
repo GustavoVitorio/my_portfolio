@@ -412,12 +412,27 @@ footer {
     gap: 10px;
 }
 
+#iconFooter a {
+    transition: 0.3s all;
+}
+
+#iconFooter a:active {
+    /* style */
+    transform: scale(0.90);
+    opacity: 0.8;
+}
+
 @media (hover:hover) and (pointer: fine) {
     .aside-btns > a:hover {
         /* style */
         background-color: var(--color-highlight-III);
         border-color: var(--color-highlight-II);
     }   
+
+    #iconFooter a:hover {
+        /* style */
+        transform: scale(1.2);
+    }
 }
 
 @media (max-width: 1060px) {
@@ -573,7 +588,7 @@ footer {
 }
 
 @media (max-width: 510px) {    
-    
+
     /* Nav */
 
     #home {
