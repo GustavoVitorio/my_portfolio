@@ -61,6 +61,7 @@ section {
 
 .element-section > img {
     /* tamanho */
+    width: 85px;
     margin: 0.5em 0 0.5em 1em;
 }
 
@@ -120,7 +121,7 @@ section {
 .element-section.aberto {
     /* disposição */
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: 100px auto;
     grid-template-areas: 
     'img text btn'
@@ -287,7 +288,21 @@ section {
 
     .element-section.aberto > img {
         /* disposição */
+        /* display: none; */
+    }
+}
+
+@media (max-width: 720px) {
+
+    /* Section */
+
+    .element-section.aberto > img {
+        /* disposição */
         display: none;
+    }
+
+    .element-section.aberto  .text-section h3 {
+        color: var(--color-action);
     }
 }
 
